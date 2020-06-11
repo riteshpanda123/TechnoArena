@@ -1,0 +1,45 @@
+<%- include("partials/displaynewsheader") %>
+<%- include("partials/messages") %>
+
+
+<div class="container">
+	<div class = "row"  >
+		<div class="col-md-9" style="margin-left:auto;">
+			<div class="thumbnail"  style="box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);" >
+				<h4 style="font-size:30px; margin-left:10px; margin-top:10px;"><a><strong><%=posts.name%></strong></a></h4>
+				<hr>
+				<img class="img-responsive" src="<%=posts.image%>" style="width:1000px; height:auto; padding:10px;">
+				<div class="container">
+				<div class="caption-full" style="margin-left:auto;">
+					<p style="font-size:17px;">
+						<em>Source: <%=posts.source%></em>
+					</p>
+					<h4><em>Created on: <%=posts.date%></em></h4>
+				</div>	
+				<hr>
+					<p style="font-size:18px; white-space: pre-wrap;"><%=posts.description%></p>
+			
+				</div>
+			</div>
+        </div>
+        <div class="col-md-3">
+            <div class="container" style="background-color:aliceblue; border-radius: 3px; margin-bottom:20px; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);">
+                <h2 style="text-align: center; margin-top: 10px; margin-bottom: 10px; font-size: 30px;">Recent News</h2>
+				<%for(var i=0; i<4; i++){%>
+				<%if(news[i]._id != posts.id){%>
+                <div class="thumbnail" style="margin-left:auto; box-shadow: 0 5px 5px rgba(0, 0, 0, 0.5);">
+                    <img class="img-responsive" src="<%=news[i].image%>" style="width:auto; height:auto;">
+					<hr>
+					<h4 style="font-size:18px; text-align: left;"><a><%=news[i].name%></a></h4>
+					<a class="btn btn-danger" href="/news/<%=news[i]._id%>" style="color: #FFFFFF; margin-bottom:3px;">Read more</a>	
+				</div>
+				<%}%>
+				<%}%>
+				<h1 style="text-align: center; font-size: 18px;"><a href="/news">Check more news...</a></h1>
+                </div>
+            </div>
+	</div>	
+</div>
+
+
+<%- include("partials/footer") %>

@@ -1,0 +1,99 @@
+<%- include("partials/headersearch") %>
+<div class="container" >
+  <div class="row" >
+    <div class="col-lg-6">
+    	<form name="myForm" action="/brand/:brand/:_id" onsubmit="return validateForm()" method="POST">
+            <div class="form-group">
+            <h1 style="font-size: 50px; color: white;"><strong>SEARCH</strong></h1>
+          <input type="text" id="searchName" name="devname" placeholder="Enter a device here..">
+          <input type="image" src="https://img.icons8.com/pastel-glyph/64/000000/search--v2.png" align="center" width="45px" height="45px" style="margin-bottom: 10px; margin-left: 8px;">
+        </div>
+        </form>
+      <h3 style="font-size: 25px; color: white; margin-top: 20px;">Here we provide you the specifications of different mobile devices! </h3>
+      <h3 style="font-size: 15px; color: red; margin-top: 20px;">Note: Device specifications may change with time.</h3>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-lg-9" style="margin-top:40px;">
+    <h2 style="font-size: 40px; color: white;"><strong>Featured Brands</strong></h2>
+    <div class="pull-left" style="margin-top:20px;">
+    <div class="container" style="background-color:rgba(255, 255, 255, 0.212); border-radius: 10px;">
+      <div class="row" style="padding-top: 5px;">
+        <div class="col-lg-12">
+          <a href="/brand/OnePlus"><img src="https://firebasestorage.googleapis.com/v0/b/technoarenamobile.appspot.com/o/WebsiteAssets%2FBrand%20Images%2FOnePlus.png?alt=media&token=586a43db-8533-4e46-a470-29926313ca2a" id="brandlogo" style="height:80px;width:200px; margin-top: 2px;"></a>
+          <a href="/brand/Xiaomi"><img src="https://firebasestorage.googleapis.com/v0/b/technoarenamobile.appspot.com/o/WebsiteAssets%2FBrand%20Images%2FXiaomi.png?alt=media&token=9616cc8c-eac7-4d2a-9a81-9df45dd2a4ea" id="brandlogo" style="height:80px;width:200px;margin-top: 2px;"></a>
+          <a href="/brand/IPhone"><img src="https://firebasestorage.googleapis.com/v0/b/technoarenamobile.appspot.com/o/WebsiteAssets%2FBrand%20Images%2FiPhone.png?alt=media&token=65dadefe-c955-456e-af45-1c6a39ecf398" id="brandlogo" style="height:80px;width:200px; margin-top: 2px;"></a>
+        </div>
+      </div>
+      <div class="row" style="margin-top: 1px;">
+        <div class="col-lg-12">
+          <a href="/brand/Huawei"><img src="https://firebasestorage.googleapis.com/v0/b/technoarenamobile.appspot.com/o/WebsiteAssets%2FBrand%20Images%2FHuawei.png?alt=media&token=8001bb9d-b4e6-4784-861b-e9f37f5d85ec" id="brandlogo" style="height:80px;width:200px; margin-top: 2px;"></a>
+          <a href="/brand/Samsung"><img src="https://firebasestorage.googleapis.com/v0/b/technoarenamobile.appspot.com/o/WebsiteAssets%2FBrand%20Images%2FSamsung.png?alt=media&token=d0f2c952-f639-4c81-80c7-e33025ff433a" id="brandlogo" style="height:80px;width:200px; margin-top: 2px;"></a>
+          <a href="/brand/Oppo"><img src="https://firebasestorage.googleapis.com/v0/b/technoarenamobile.appspot.com/o/WebsiteAssets%2FBrand%20Images%2FOppo.png?alt=media&token=b2eb798d-04f6-43d9-8b6d-812e60bc311b" id="brandlogo" style="height:80px;width:200px; margin-top: 2px;"></a>
+        </div>
+      </div>
+      <div class="row" style="margin-top: 1px; padding-bottom: 8px;">
+        <div class="col-lg-12">
+          <a href="/brand/Asus"><img src="https://firebasestorage.googleapis.com/v0/b/technoarenamobile.appspot.com/o/WebsiteAssets%2FBrand%20Images%2FAsus.png?alt=media&token=357956a7-2b38-4976-8114-04aed5b553dd" id="brandlogo" style="height:80px;width:200px; margin-top: 2px;"></a>
+          <a href="/brand/Realme"><img src="https://firebasestorage.googleapis.com/v0/b/technoarenamobile.appspot.com/o/WebsiteAssets%2FBrand%20Images%2FRealme.png?alt=media&token=f767ed9c-33eb-4746-a15f-051872307e7c" id="brandlogo" style="height:80px;width:200px; margin-top: 2px;"></a>
+          <a href="/brand/Vivo"><img src="https://firebasestorage.googleapis.com/v0/b/technoarenamobile.appspot.com/o/WebsiteAssets%2FBrand%20Images%2FVivo.png?alt=media&token=0f964bee-0180-4efa-b390-9cb1e69023af" id="brandlogo" style="height:80px;width:200px; margin-top: 2px;"></a>
+        </div>
+      </div>
+    </div>
+  </div>
+    </div>
+  </div>
+</div>
+
+<STYLE TYPE="text/css" media="all">
+  .ui-autocomplete {
+      position: absolute;
+      cursor: default;
+      max-height: 180px;
+      font-size: 15px;
+      border-radius: 5px;
+      overflow-y: scroll;
+      overflow-x: hidden;}
+  </STYLE>
+
+<script>
+  $(function(){
+$('#searchName').autocomplete({
+source: function(req,res){
+  $.ajax({
+    url:"autocomplete/",
+    dataType:"jsonp",
+    type:"GET",
+    data:req,
+    success: function(data){
+      res(data)
+    },
+    error: function(err){
+      console.log(err.status);
+    }
+  });
+},
+minLength:1,
+select: function(event,ui){
+  if(ui.item){
+    $('#searchName').val(ui.item.label);
+  }
+}
+});
+  });
+
+  function validateForm() {
+  var x = document.forms["myForm"]["devname"].value;
+  if (x == "") {
+    alert("Please enter a device name to search!!");
+    return false;
+  }
+}
+
+  </script> 
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+</body>
+</html>
+<!-- <%- include("partials/footer") %> -->

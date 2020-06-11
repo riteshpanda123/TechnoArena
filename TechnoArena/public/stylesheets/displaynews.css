@@ -1,0 +1,42 @@
+body {
+  background: #c9d6ff; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to left,
+    #e2e2e2,
+    #c9d6ff
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to left,
+    #e2e2e2,
+    #c9d6ff
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+body,
+html {
+  width: 100%;
+  min-height: 100%;
+  font-family: 'Product Sans', sans-serif;
+  color: black;
+}
+.navbar-brand {
+  color: #ffffff !important;
+  margin-left: 20px;
+  padding: 2px 15px;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.navbar-nav {
+  margin-right: 7%;
+  font-size: 15px;
+}
+
+.nav-item {
+  margin-right: 7px;
+  margin-left: 7px;
+}
+
+#navitem {
+  color: #000000;
+}

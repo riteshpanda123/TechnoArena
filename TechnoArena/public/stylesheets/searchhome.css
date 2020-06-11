@@ -1,0 +1,83 @@
+body{
+	background: url("https://firebasestorage.googleapis.com/v0/b/technoarenamobile.appspot.com/o/WebsiteAssets%2FHomepageAssets%2FAbout%20Us%20%20(View%201)%20%E2%80%93%201.png?alt=media&token=2df39e39-a7dd-4c81-9029-0fdb713a24e7");
+    background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+body,
+html {
+    width: 100%;
+    height: 100%;
+    font-family: 'Product Sans', sans-serif;
+    color: white;
+}
+
+.navbar {
+	width: 100%;
+	background-color: rgba(81, 46, 97, 0.322);
+    position: absolute;
+    min-height: 50px;
+    border: 1px solid transparent;
+    z-index: 9999;
+ }
+
+.navbar-brand {
+	color: #ffffff  !important;
+  margin-left: 20px;	
+  padding: 2px 15px;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.navbar-nav{
+	margin-right: 7%;
+	font-size: 15px;
+}
+
+.nav-item{
+	margin-right: 7px;
+	margin-left: 7px;
+}
+
+#navitem{
+	color: #000000;
+}
+
+.container-fluid {
+     float:left;
+}
+
+#searchName{
+    height: 35px;
+    width: 400px;
+    border-radius: 10px;
+    font-size: 20px;
+    color: black;
+    padding-left: 10px;
+    margin-top: 10px;
+}
+
+@media only screen and (max-width: 700px){
+  #searchName{
+    height: 35px;
+    width: 350px;
+    border-radius: 10px;
+    font-size: 20px;
+    color: black;
+    padding-left: 10px;
+    margin-top: 10px;
+  }
+}
+
+#brandlogo:hover{
+  z-index: 1;
+  transform: scale(1.10);
+  box-shadow: 20px 25px 40px rgba(0,0,0,0.5);
+  transition-duration: 0.5s;
+  border-radius: 5px;
+}
+#brandlogo{
+  transition: transform .5s ease;
+  border-radius: 5px;
+}

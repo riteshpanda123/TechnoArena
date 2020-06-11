@@ -1,0 +1,123 @@
+<%- include("partials/headersearchresult") %>
+<div class="row" style="margin-left:20px; margin-right:20px;">
+    <div class="col col-lg-9">
+    <div class="container"  style="background-color:white; border-radius: 3px;">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-10">
+                    <h1 style="font-size:40px; color:black; margin-left:20px;  margin-top:10px"><%=device.devname%></h1>
+                </div>
+                <div class="col-lg-2">
+                    <a href="/search"><button id="back"><i class="fa fa-arrow-circle-left"></i> Go Back</button></a>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="row" style="margin-top:10px;">
+        <div class="container" style=" border-radius:20px;">
+        <div class="col col-lg-4" style="margin-top:5px; margin-bottom:15px;">
+            <div class="container">
+            <img src="<%=device.devimg%>" style="width:220px;height:300px;">
+            </div>
+        </div>
+        <div class="col col-lg-8">
+            <div class="container" style="margin-top:5px; margin-left:-40px;">
+            <h1 style="font-size:40px; color:black; margin-top:10px;">Top Features<h1>
+            <h1 style="font-size:25px; color:black; margin-top:26px; "><img class="icon"src="https://firebasestorage.googleapis.com/v0/b/technoarenamobile.appspot.com/o/WebsiteMaterial%2Fcpu%20-%20Copy.png?alt=media&token=24835110-9fa4-4ca8-a33e-041d721b8044"><%=device.processor%></h1><hr>
+            <h1 style="font-size:25px; color:black; margin-top:20px; "><img class="icon"src="https://firebasestorage.googleapis.com/v0/b/technoarenamobile.appspot.com/o/WebsiteMaterial%2Fgpu%20-%20Copy.png?alt=media&token=5bc4b5cb-46df-48fe-be46-002b3d1898b8"><%=device.gpu%></h1><hr>
+            <h1 style="font-size:25px; color:black; margin-top:20px;"><img class="icon"src="https://firebasestorage.googleapis.com/v0/b/technoarenamobile.appspot.com/o/WebsiteMaterial%2Ffront-cam%20-%20Copy.png?alt=media&token=ff0d3418-7c80-4978-83d5-f779f16d8ae5"><%=device.frontcamera%></h1><hr>
+            </div>
+        </div>
+        </div>
+        </div>
+        </div>
+        <div class="row">
+            <div class="col col-lg-12">
+                <div class="container" style=" margin-top:10px; margin-bottom:20px; border-radius: 3px; background-color:white;">
+                <h1 style="color:black; font-size:35px; margin-top:8px;">Specifications</h1>
+                <hr>
+                <table >
+                <tr>
+                    <td id="property"><h3 style="color:red; font-size:22px;">Operating System</h3></td>
+                    <td><p style="color:black; font-size:18px;"><%=device.operatingsystem%></p><hr></td>
+                </tr>
+                <tr>
+                    <td id="property"><h3 style="color:red; font-size:22px;">Processor</h3></td>
+                    <td><p style="color:black; font-size:18px;"><%=device.processor%></p><hr></td>
+                </tr>
+                <tr>
+                    <td id="property"><h3 style="color:red; font-size:22px;">CPU</h3></td>
+                    <td><p style="color:black; font-size:18px;"><%=device.cpu%></p><hr></td>
+                </tr>
+                <tr>
+                    <td id="property"><h3 style="color:red; font-size:22px;">GPU</h3></td>
+                    <td><p style="color:black; font-size:18px;"><%=device.gpu%></p><hr></td>
+                </tr>
+                <tr>
+                    <td id="property"><h3 style="color:red; font-size:22px;">Display</h3></td>
+                    <td><p style="color:black; font-size:18px;"><%=device.display%></p><hr></td>
+                </tr>
+                <tr>
+                    <td id="property"><h3 style="color:red; font-size:22px;">Storage/RAM</h3></td>
+                    <td><p style="color:black; font-size:18px;"><%=device.storageram%></p><hr></td>
+                </tr>
+                <tr>
+                    <td id="property"><h3 style="color:red; font-size:22px;">Main Camera</h3></td>
+                    <td><p style="color:black; font-size:18px;"><%=device.maincamera%></p><hr></td>
+                </tr>
+                <tr>
+                    <td id="property"><h3 style="color:red; font-size:22px;">Front Camera</h3></td>
+                    <td><p style="color:black; font-size:18px;"><%=device.frontcamera%></p><hr></td>
+                </tr>
+                <tr>
+                    <td id="property"><h3 style="color:red; font-size:22px;">Video Recording</h3></td>
+                    <td><p style="color:black; font-size:18px;"><%=device.sensors%></p><hr></td>
+                </tr>
+                <tr>
+                    <td id="property"><h3 style="color:red; font-size:22px;">Battery Capacity</h3></td>
+                    <td><p style="color:black; font-size:18px;"><%=device.batterycapacity%></p><hr></td>
+                </tr>
+                <tr>
+                    <td id="property"><h3 style="color:red; font-size:22px;">Charging Feature</h3></td>
+                    <td><p style="color:black; font-size:18px;"><%=device.chargingfeatures%></p><hr></td>
+                </tr>
+                <tr>
+                    <td id="property"><h3 style="color:red; font-size:22px;">Price</h3></td>
+                    <td><p style="color:black; font-size:18px;"><%=device.price%></p><hr></td>
+                </tr>
+                <tr>
+                    <td id="property"><h3 style="color:red; font-size:22px;">Buy from</h3></td>
+                    <td><a href="<%=device.shoplink%>" style="color:black; font-size:18px;">Shop Link</a><hr></td>
+                </tr>
+                </table>
+                </div>
+            </div>
+        </div>
+    
+    </div>
+
+    <div class="col col-lg-3">
+    <div class="container" style="background-color:aliceblue; border-radius: 3px; margin-bottom:20px">
+                <h2 style="text-align: center; margin-top: 10px; margin-bottom: 10px; font-size: 30px;">More from <%=device.brand%></h2>
+                
+                <%for(var i=alldev.length; i>(alldev.length-8); i--){%>
+                <div class="row" style="height:150px; text-align:center;">
+                <div class="col col-lg-6">
+                <div class="thumbnail" style=" height:140px; width:100px; margin-left:20px;">
+                    <img class="img-responsive" src="<%=alldev[i-1].devimg%>" style="width:70px; height:95px;"><hr>
+					<h4 style="font-size:10px; text-align: center; margin-top:-6px;"><a href="/brand/<%=alldev[i-1].brand%>/<%=alldev[i-1]._id%>"><%=alldev[i-1].devname%></a></h4>	
+				</div>
+                </div>
+                <div class="col col-lg-6">
+                <div class="thumbnail" style="height:140px; width:100px;">
+                    <img class="img-responsive" src="<%=alldev[i-2].devimg%>" style="width:70px; height:95px;"><hr>
+					<h4 style="font-size:10px; text-align: center; margin-top:-6px;"><a href="/brand/<%=alldev[i-2].brand%>/<%=alldev[i-2]._id%>"><%=alldev[i-2].devname%></a></h4>	
+				</div>
+                </div>
+            </div>
+                <%i=i-1%>
+            <%}%>
+            <h1 style="text-align: center; font-size: 18px;"><a href="/search">Check more...</a></h1>
+    </div>
+</div>
+<%- include("partials/footer") %>

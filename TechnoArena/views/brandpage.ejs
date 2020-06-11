@@ -1,0 +1,38 @@
+<%- include("partials/headerbrandpage") %>
+<div class="row" style="margin-left:70px; margin-right:20px;" >
+    <div class="col-md-9" style="background-color:white; border-radius:3px; margin-bottom:50px;">
+    <div class="container">
+    <div class="row">
+    <div class="col-lg-10">
+        <img src="<%=image.brandimage%>" style="width:235px;height:100px; margin-bottom:20px; margin-left:10px;">
+    </div>
+    <div class="col-lg-2">
+        <a href="/search"><button id="back"><i class="fa fa-arrow-circle-left"></i> Go Back</button></a>
+    </div>
+    <hr style="margin-bottom:10px;">
+    </div>
+    <%for(var i=branddata.length-1; i>=0; i--){%>
+    <div class="col-sm-2">
+        <div class="thumbnail" style="width:130px; height:220px;">
+                <img class="img-responsive" src="<%=branddata[i].devimg%>" style="width:110px; height:145px;"><hr>
+				<h4 style="font-size:16px; text-align: center; "><a href="/brand/<%=branddata[i].brand%>/<%=branddata[i]._id%>" style="color:black; "><%=branddata[i].devname%></a></h4>	
+		</div>
+    </div>
+    <%}%>
+    </div>
+    </div>
+    <div class="col-md-3">
+            <div class="container" style=" width:250px; background-color:aliceblue; border-radius: 3px; margin-bottom:50px; margin-right:20px;">
+                <h2 style="text-align: center; margin-top: 10px; margin-bottom: 10px; font-size: 30px;">Recent News</h2>
+				<%for(var i=0; i<3; i++){%>
+                <div class="thumbnail" style="margin-left:auto;">
+                    <img class="img-responsive" src="<%=news[i].image%>" style="width:auto; height:auto;">
+					<h4 style="font-size:18px; text-align: left;"><a><%=news[i].name%></a></h4>
+					<a class="btn btn-danger" href="/news/<%=news[i]._id%>" style="color: #FFFFFF;">Read more</a>	
+				</div>
+				<%}%>
+				<h1 style="text-align: center; font-size: 18px;"><a href="/news">Check more news...</a></h1>
+                </div>
+            </div>
+	</div>	
+<%- include("partials/footer") %>

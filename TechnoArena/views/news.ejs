@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>TechnoArena</title>
+	<link rel="icon" href="https://firebasestorage.googleapis.com/v0/b/technoarenamobile.appspot.com/o/ta_logo_full1.png?alt=media&token=b401f8b5-a7ea-4918-b169-f62558be3d12" type="image/png">
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+		<link rel = "stylesheet" type = "text/css" href = "/stylesheets/news.css" >
+</head>
+<body>
+	<nav class="navbar fixed-top navbar-expand-md navbar-light">
+  <a class="navbar-brand">
+    <img src="https://firebasestorage.googleapis.com/v0/b/technoarenamobile.appspot.com/o/ta_logo_full1.png?alt=media&token=b401f8b5-a7ea-4918-b169-f62558be3d12" height="50" width="50" class="d-inline-block align-center" alt="">TechnoArena</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div class="navbar-nav ml-auto">
+      <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
+      <a class="nav-item nav-link" href="#">News</a>
+      <a class="nav-item nav-link" href="#">Search</a>
+      <a class="nav-item nav-link" href="#">Login</a>
+      <a class="nav-item nav-link" href="#">About Us</a>
+      </div>
+  </div>
+</nav>
+
+<div class="container newssection">
+  <div class="jumbotron jumbotron-fluid">
+    <h2 class="display-2" style="color:#000000; margin-top:-10px;">Latest News</h2>
+    <div class="container">
+        <div class="row" style="margin-top: 30px; margin-left: auto;">
+            <div class="col-lg-12 col-md-6">
+            <% for(var i=0; i<posts.length ; i++){ %>
+            <%if(i<6){%>
+            <div class="img__wrap" style="margin-top:-20px;">
+                <img src="<%=posts[i].image%>" class="image">
+                <div class="img__description_layer">
+                <p class="img__description"><a href="/main/<%=posts.type%>/<%=posts.filtertype%>/<%=posts._id%>" id="toDisplay"><%=posts[i].name%></a></p>
+                </div>
+            </div>
+            <%}%>
+            <%}%>  
+            </div>
+        </div>
+      </div>
+    </div>
+    <h2 style="color: #FFFFFF; font-size: 40px; font-weight: bold; margin-top: 50px; margin-bottom:15px;">Recent News</h2>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+            <% for(var i=3; i<posts.length ; i++){%>
+                <div class="content">
+                    <img src="<%=posts[i].image%>" class="recentimages" style="float:left; margin-right:20px; margin-top: auto;">
+                        <h3 style="color: black; font-size: 30px;"><strong><%=posts[i].name%></strong></h3> 
+                        <p style="color: black; font-size: 13px; margin-top:-5px;"><i><%=posts[i].date%></i></p>
+                        <p style="color: black; font-size: 20px;" id="recentdesc"><%=posts[i].description%></p>
+                        <a class="btn btn-danger" style=" margin-top: -10px;" href="/main/<%=posts[i].type%>/<%=posts.filtertype%>/<%=posts._id%>">Read more</a>
+                    </div>
+            <%}%>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+<script>
+$(function () {
+  $(document).scroll(function () {
+	  var $nav = $(".navbar");
+	  $nav.toggleClass('scrolled', $(this).scrollTop() > $nav.height());
+	});
+});
+</script>
+</html>

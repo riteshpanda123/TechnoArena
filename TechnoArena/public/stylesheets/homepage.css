@@ -1,0 +1,111 @@
+body{
+	background: url("https://firebasestorage.googleapis.com/v0/b/technoarenamobile.appspot.com/o/Component%201%20%E2%80%93%201.png?alt=media&token=e4eef7d2-c5d3-49b4-8fb6-1b6db7b1e237");
+	background-size: cover;
+	background-repeat: no-repeat; 
+}
+
+.w3-lobster {
+  font-family: "Lobster", serif;
+}
+
+.w3-roboto {
+  font-family: "Roboto", serif;
+}
+
+.w3-pacifico {
+  font-family: "Pacifico", serif;
+}
+
+body,
+html {
+    width: 100%;
+    height: 100%;
+    font-family: 'Product Sans', sans-serif;
+    color: white;
+}
+
+.navbar-brand {
+	color: #ffffff  !important;
+  margin-left: 20px;	
+  padding: 2px 15px;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.navbar-nav{
+	margin-right: 7%;
+	font-size: 15px;
+}
+
+.nav-item{
+	margin-right: 7px;
+	margin-left: 7px;
+}
+
+#navitem{
+	color: #000000;
+}
+
+.content{
+	margin-top: 12%;
+}
+
+h3{
+	margin-left: 20px;
+	font-weight: bold;
+	margin-top: 4%;
+	font-size: 35px;
+	letter-spacing: -1px;
+}
+
+h1{
+	margin-left: 20px;
+	margin-top: -10px;
+	font-weight: bold;
+	color: #00FFFF;
+	letter-spacing: -2px;
+	font-size: 60px;
+}
+
+.maincontent{
+	margin-left: 20px;
+	width: 500px;
+	text-align: left;
+	font-size: 22px;
+	margin-top: 12px;
+}
+
+.btn{
+	border-radius: 20px;
+	color: #FFFFFF;
+	background-color: #099FFF;
+}
+
+#connectedimg{
+	height: 15px;
+	width:  15px;
+	margin-left: 5px;
+}
+
+
+.follow{
+	font-size: 15px;
+	letter-spacing: -0.5px;
+	margin-top: 6%;
+}
+
+.followsites{
+	margin-top: -2%;
+}
+
+#facebook{
+	margin-right:5px;
+}
+
+#instagram{
+	margin-right:5px;
+}
+
+#twitter{
+	margin-right:5px;
+}

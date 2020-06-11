@@ -1,0 +1,77 @@
+<%- include("partials/header2") %>
+<%- include("partials/messages") %>
+<div class="container w3-center">
+	<h1 class="w3-center w3-lobster">
+		Connect with us!
+	</h1>
+	
+	
+	
+	<form action="/login" method="POST">
+	<div class="form-group">
+	<input type="text" name="email" placeholder="Enter E-mail here" id="emaillogin">
+	</div>
+	<div class="form-group">
+	<input type="password" name="password" placeholder="Enter password here" id="passwordlogin">
+	</div>
+	
+	<p>
+		<button type="submit" class="btn btn-primary btn-group-lg w3-center" id="login">
+		Login<img src="https://firebasestorage.googleapis.com/v0/b/technoarenamobile.appspot.com/o/WebsiteMaterial%2Flogin-xxl.png?alt=media&token=367dc080-1ab9-4bec-96e1-3a1f0b91b63c" id="connectedimg"/>
+		</button>
+	</p>
+	</form>
+	<p class="w3-center">
+	<button id="newacc" type="button" class="btn btn-primary btn-group-lg w3-center" data-toggle="modal" data-target="#exampleModalCenter">
+		Create Account<img src="https://firebasestorage.googleapis.com/v0/b/technoarenamobile.appspot.com/o/WebsiteMaterial%2Fadd-user-2-xxl%20(1).png?alt=media&token=5af4e5f6-a21a-4890-87c2-1e9dc5f200f4" id="connectedimg"/>
+	</button>
+  </p>
+    <h4>Sign in with social network </br></h4>
+    <a href="/auth/facebook"><img src="https://img.icons8.com/color/45/000000/facebook.png"/></a>&nbsp&nbsp&nbsp&nbsp&nbsp
+    <a href="/auth/google"><img src="https://img.icons8.com/color/45/000000/google-logo.png"/></a>
+
+
+<!-- Modal -->
+<div class="modal" id="exampleModalCenter" tabindex="-1" role="dialog">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 class="modal-title w3-lobster" id="modalheader">Sign Up here!</h2>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+       	<div id="login-box">
+  <div class="left">
+	  
+	  <form action="/register" method="POST">
+     <input type="text" id="username" name="name" placeholder="Name" required/>
+    <input type="email" id="email" name="email" placeholder="E-mail" required/>
+    <input type="password" id="password1" name="password" placeholder="Password" required />
+    <input type="password" id="password2" name="password2" placeholder="Retype password" required/>
+    
+    <input type="submit" class="w3-lobster" name="signup_submit" value="Sign me up" /> 
+	  </form>
+  </div>
+  
+  <div class="right">
+    <span class="loginwith">Sign up with<br />social network</span>
+    <a href="/auth/facebook"><button class="social-signin facebook">Log in with facebook</button></a>
+    <a href="/auth/google"><button class="social-signin google">Log in with Google+</button></a>
+  </div>
+  <div class="or">OR</div>
+</div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+	<p>
+    <br>
+		<a href="#" id="help">Need Help? Contact us here!</a>
+	</p>
+</div>
+<%- include("partials/footer") %>

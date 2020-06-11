@@ -1,0 +1,38 @@
+<%- include("partials/header") %>
+
+<div class="container">
+	<div class="row">
+		<div style="width:50%; margin:25px auto; background:#FFFFFF; border-radius:20px;">
+		<h1>
+			Create a New Blog!
+		</h1>
+			<form action="/latestnews" method="POST">
+				<div class="form-group">
+					<input class="form-control" type="text" name="name" placeholder="Title" id="input">
+				</div>
+				<div class="form-group">
+					<input class="form-control" type="text" name="image" placeholder="Image url" id="input">
+				</div>
+				<div class="form-group">
+					<textarea class="form-control" type="text" name="description" placeholder="Description" id="inputdesc"><pre></pre></textarea>
+				</div>
+                <div class="form-group">
+					<label for="start">Creation Date : </label>
+					<input type="date" id="start" name="date"
+                                min="201-01-01" max="2040-12-31">
+				</div>
+				<div class="form-group">
+					<textarea class="form-control" type="text" name="source" placeholder="Source" id="inputsource">				</textarea>
+				</div>
+				<div class="form-group">
+					<button class="btn btn-lg btn-primary btn-block">
+						Submit!
+					</button>
+				</div>
+				<a href="/news" id="goback">Go Back</a>
+			</form>
+		</div>
+	</div>
+</div>
+
+<%- include("partials/footer") %>
